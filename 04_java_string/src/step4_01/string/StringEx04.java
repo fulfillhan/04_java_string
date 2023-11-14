@@ -6,13 +6,14 @@ public class StringEx04 {
 
 	public static void main(String[] args) {
 
-		// [1] 문자열 > 숫자 형변환
+		// [1] 문자열 > 숫자 형변환 Integer.parseInt(데이터);
 		//String birthy = "2023년"; //문자열 ** 중간에 숫자아닌 형태가 들어가며 오류남**
 		String birthy = "2023";
 		System.out.println(birthy + 1);//20231
+		
 		int nBirthy = Integer.parseInt(birthy);//Integer.parseInt("문자열") = 메서드 사용
 		System.out.println(nBirthy+1);//2024
-		// [2] 숫자 > 문자열 형변환
+		// [2] 숫자 > 문자열 형변환 Integer.toString(숫자)
 		
 		// 2-1) + "" 사용. 야매..이지만 많이 사용함
 		int salary = 2000000;
