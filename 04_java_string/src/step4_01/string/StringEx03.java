@@ -101,9 +101,24 @@ public class StringEx03 {
 			System.out.print(temp[i]+ " ");
 		}
 		System.out.println();
+		System.out.println("\n==============\n");
 		
 		// 참고) 문자열 비교 : compareTo()-> 글자 비교
+		String str4 = "씨";
+		String str5 = "자바";
+		String str6 = "파이썬";
+		String str7 = "씨";
 		
+		//왼쪽 데이터가 작을 경우 음수가 반환된다.
+		System.out.println(str4.compareTo(str5));
+		System.out.println(str4.compareTo(str6));
+		
+		//왼쪽 데이터가 클 경우 양수가 반환된다.
+		System.out.println(str5.compareTo(str4));
+		System.out.println(str6.compareTo(str4));
+		
+		//양쪽 데이터가 같은 경우는 0// 두글자가 같다
+		System.out.println(str4.compareTo(str7));
 		
 		
 	}
