@@ -12,10 +12,8 @@ public class StringEx08_문제 {
 		int[] score = {87, 42, 95};
 		
 		String str = "";
-				
 		
 		
-
 	}
 
 }
