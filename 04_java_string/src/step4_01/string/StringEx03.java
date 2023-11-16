@@ -18,14 +18,14 @@ public class StringEx03 {
 
 		String str = "megait";
 		System.out.println(str);
-		System.out.println("\n==============\n");
+		System.out.println("/n==============\n");
 		
 		// [1] length() : 문자열의 길이
 		//System.out.println(str.length());
 		//str.length();
 		int length = str.length();
 		System.out.println(length);
-		System.out.println("\n==============\n");
+		System.out.println("/n==============\n");
 		
 		// [2] indexOf("글자") : 글자가 포함된 인덱스 확인
 		System.out.println(str.indexOf("m"));// "m"의 위치는?

@@ -31,7 +31,8 @@ public class StringEx07_문제 {
 		
 		/*
 		 * //김철수 이만수 이영희
-		 * for (int i = 0; i < name.length; i++) { String names = name[i];
+		 * for (int i = 0; i < name.length; i++) {
+		 *  String names = name[i];
 		 *  System.out.print(names+ " "); }
 		 */
 		
