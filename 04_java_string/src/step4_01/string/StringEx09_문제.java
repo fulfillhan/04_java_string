@@ -18,38 +18,8 @@ import java.util.Scanner;
 
 public class StringEx09_문제 {
 
-	public static void main(String[] args) {
-		Random ran = new Random();
-		Scanner scanner = new Scanner(System.in);
-		
-		String[] words = {"java", "mysql", "jsp", "spring"};
-
-		//셔플
-		for (int i = 0; i < 1000; i++) {
-			int r = ran.nextInt(words.length);
-			 
-			String temp1 = words[0];
-			words[0] = words[r];
-			words[r]= temp1; 
-		}
-		//셔플을 이용해서 words[] = random 배열 생성
-		
-		// 랜덤배열에서 순서대로 문제 풀기
-		int i = 0;
-		while (i <words.length) {
-			System.out.println("["+(i+1)+"] 문제 : "+ words[i]);// [1] 문제 : 
-			System.out.print(" 입력 : ");//입력 : 
-			String myAnswer = scanner.next();
-			
-			/*
-			 * if (myAnswer == words[i]) {// 계속 같은 답만 출력된다.. 이유가 뭘까? i++; }
-			 */
-			
-		}
-		scanner.close();
-		
 	}
-}
+
 
 
 

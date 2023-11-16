@@ -13,7 +13,7 @@ public class StringEx07_정답예시 {
 		String[] name = new String[3];
 		int[] score = new int[3];
 		
-		String[] temp1 = str.split(",");
+		String[] temp1 = str.split(",");//temp1
 		
 		for (int i = 0; i < temp1.length; i++) {
 			String[] temp2 = temp1[i].split("/");
