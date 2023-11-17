@@ -1,6 +1,6 @@
 package step4_01.string;
 //1차  2023-11-15
-//2차 2023-11-16  -> 혼자 다시 해보기
+//2차 2023-11-16  -> 배열 공부 필요
 import java.util.Arrays;
 
 
@@ -19,10 +19,10 @@ public class StringEx07_연습 {
 				for (int i = 0; i < temp.length; i++) {
 					// "/" 구분자 떼어주기
 					
-					// -> 여기서 부터 다시 해보기!!
+					
 					String [] temp2 = temp[i].split("/");// 김철수87 이만수42 이영희95
-					name[i] = temp2[i];
-					score[i]= Integer.parseInt(temp2[i]);
+					name[i] = temp2[0];
+					score[i]= Integer.parseInt(temp2[1]);
 				}
 				System.out.println(Arrays.toString(name));
 				System.out.println(Arrays.toString(score));

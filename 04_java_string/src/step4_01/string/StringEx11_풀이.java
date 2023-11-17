@@ -1,4 +1,5 @@
 package step4_01.string;
+//2023-11-17
 
 import java.util.Scanner;
 
@@ -19,63 +20,47 @@ import java.util.Scanner;
  * } 
  */
 
-
-public class StringEx11_정답예시 {
-
+public class StringEx11_풀이 {
 	public static void main(String[] args) {
-
+		
 		Scanner scan = new Scanner(System.in);
 		
-		String[][] items = new String[100][2];
-		
-		for( int i = 0; i < items.length; i++) {
+		String[][] items = new String[100][2];// item 의 배열 선언
+		for(int i = 0; i < items.length; i++) {// [  i ,j   ][  i ,j  ][  i ,j   ]...
 			items[i][0] = "";
 			items[i][1] = "";
 		}
- 		
+		
 		int itemCnt = 0;
 		
-		while (true) {
-			
+		while(true) {// 무한 반복
+
 			System.out.println("[관리자 모드]");
 			System.out.println("[1]카테고리 관리");
 			System.out.println("[2]아 이 템  관리");
 			System.out.println("[3]전체품목 출력");
 			System.out.println("[4]종료");
 			
-			System.out.print(": ");
+			System.out.print("번호 입력 : ");
 			int sel = scan.nextInt();
 			
+			//카테고리 관리->추가할 카테고리 입력 : 
 			if (sel == 1) {
-				System.out.print("추가할 카테고리 입력 : ");
-				String category = scan.next();
-				items[itemCnt][0] = category;
-				itemCnt++;
+				
+				
 			}
+			//아이템 관리 -> 카테고리를 먼저 선택후 아이템을 추가한다.
 			else if (sel == 2) {
-				for (int i = 0; i < itemCnt; i++) 
-				System.out.println("[" + i + "]" + items[i][0]);
-				System.out.print("카테고리를 선택하세요 : ");
-				int choice = scan.nextInt();
 				
-				System.out.print("추가할 아이템을 입력하세요 : ");
-				String item = scan.next();
-				
-				items[choice][1] += item;
-				items[choice][1] += "/";
 			}
+			//전체 품목 -> 출력시( ex :출고품목 : 사과/메론/) 구분자 사용한다.
 			else if (sel == 3) {
-				for (int i = 0; i < itemCnt; i++) {
-					System.out.println(items[i][0] + " : " + items[i][1]);
-				}
 				
 			}
-			else if (sel == 4) {
-				scan.close();
-				break;
-			}
+			else if (sel == 4) {}
 			
 		}
+		
 	}
 
 }
