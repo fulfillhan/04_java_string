@@ -2,6 +2,7 @@ package step4_01.string;
 //2023-11-17
 
 import java.util.Scanner;
+import java.util.Locale.Category;
 
 /*
  * # 쇼핑몰 [관리자]
@@ -20,7 +21,8 @@ import java.util.Scanner;
  * } 
  */
 
-public class StringEx11_풀이 {
+public class StringEx11_연습 {
+
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
@@ -41,25 +43,49 @@ public class StringEx11_풀이 {
 			System.out.println("[3]전체품목 출력");
 			System.out.println("[4]종료");
 			
-			System.out.print("번호 입력 : ");
-			int sel = scan.nextInt();
-			
+			System.out.print("번호 입력 : ");// 관리자 모드의 번호 입력
+			int managerNum = scan.nextInt();
+		
 			//카테고리 관리->추가할 카테고리 입력 : 
-			if (sel == 1) {
-				
-				
+			if (managerNum == 1) {
+				// 추가할 카테고리 입력받기= String
+				System.out.print("추가할 품목 입력 : ");
+				String category = scan.next();
+				items[itemCnt][0] = category;
+				itemCnt++;
+				/*
+				 * items[itemCnt][0] = categoryNum; itemCnt++;
+				 */
 			}
 			//아이템 관리 -> 카테고리를 먼저 선택후 아이템을 추가한다.
-			else if (sel == 2) {
+			else if (managerNum == 2) {
+				for (int i = 0; i < itemCnt; i++) {
+					System.out.println("["+ i+ "]"+ items[i][0] );
+				}
+				System.out.print("품목의 번호를 선택하세요 : ");
+				int categoryNum = scan.nextInt();
+				System.out.print("추가할 아이템을 입력하세요 : ");
+				String myItem = scan.next();
+				
+				items[categoryNum][1] += myItem+ "/";// 구분자 넣어주기
 				
 			}
-			//전체 품목 -> 출력시( ex :출고품목 : 사과/메론/) 구분자 사용한다.
-			else if (sel == 3) {
+			//전체 품목 -> 출력시( ex :(카테고리) : 사과/메론/) 
+			else if (managerNum == 3) {
+				for (int i = 0; i < itemCnt; i++) {
+					System.out.println(items[i][0]+ " : "+ 	items[i][1]);
+				}
 				
 			}
-			else if (sel == 4) {}
+			else if (managerNum == 4) {
+				System.out.println("==종료==");
+				//scan.close();
+				break;
+			}
+			
 			
 		}
+		scan.close();
 		
 	}
 
