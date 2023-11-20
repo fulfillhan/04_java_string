@@ -56,7 +56,7 @@ public class StringEx11_정답예시 {
 				for (int i = 0; i < itemCnt; i++) 
 				System.out.println("[" + i + "]" + items[i][0]);
 				
-				System.out.print("카테고리를 선택하세요 : ");
+              System.out.println("카테고리를 선택하세요 : ");
 				int choice = scan.nextInt();
 				
 				System.out.print("추가할 아이템을 입력하세요 : ");
