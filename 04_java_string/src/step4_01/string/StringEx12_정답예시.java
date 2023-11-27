@@ -1,8 +1,27 @@
 package step4_01.string;
+/*
+ * # 쇼핑몰 [장바구니]
+ * 1. 로그인 후 쇼핑 메뉴를 선택하면, 다음과 같이 상품목록을 보여준다.
+ * 	1) 사과
+ *  2) 바나나
+ *  3) 딸기
+ * 2. 번호를 선택해 상품을 장바구니에 담을 수 있다.
+ * 3. 로그인 회원의 인덱스 번호는 각 행의 첫번째 열에 저장한다.
+ * 4. 해당 회원이 구매한 상품의 인덱스 번호는 각 행의 두번째 열에 저장한다.
+ * 예)
+ * {
+ * 		{0, 1},				qwer회원 			> 사과구매
+ * 		{1, 2},				javaking회원 		> 바나나구매
+ * 		{2, 1},				abcd회원			> 사과구매
+ * 		{0, 3},				qwer회원			> 딸기구매
+ * 		...
+ * }
+ */
 
 import java.util.Scanner;
 
 public class StringEx12_정답예시 {
+	
 
 	public static void main(String[] args) {
 		
@@ -70,7 +89,8 @@ public class StringEx12_정답예시 {
 				while (true) {
 					
 					System.out.println("상품목록");
-					for(int i = 0; i < items.length; i++) System.out.println("[" + (i+1) + "] " + items[i]);
+					for(int i = 0; i < items.length; i++) 
+					System.out.println("[" + (i+1) + "] " + items[i]);
 					System.out.println("[4]뒤로가기");
 					
 					System.out.print("상품번호를 선택하세요 : ");
