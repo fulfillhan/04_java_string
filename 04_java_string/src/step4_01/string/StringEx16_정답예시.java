@@ -38,6 +38,7 @@ public class StringEx16_정답예시 {
 					correctCnt++;
 				}
 			}
+		
 			if (correctCnt == textSize) {
 				isSame = true;
 			}
