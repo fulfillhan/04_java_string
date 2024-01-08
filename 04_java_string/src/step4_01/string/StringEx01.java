@@ -18,8 +18,8 @@ public class StringEx01 {
 		Scanner scan =  new Scanner(System.in);
 		
 		System.out.print("이름 : ");
-		String getName = scan.next(); //공백을 제외한 글자를 입력받는다.
-		//String getName = scan.nextLine(); //공백을 포함한 글자를 입력받는다.-> 호환성이 떨어짐 EX ) nextInt()
+		//String getName = scan.next(); //공백을 제외한 글자를 입력받는다.
+		String getName = scan.nextLine(); //공백을 포함한 글자를 입력받는다.-> 호환성이 떨어짐 EX ) nextInt()
 		
 		System.out.println();
 		System.out.println("입력하신 이름은"+ getName+"입니다.");
