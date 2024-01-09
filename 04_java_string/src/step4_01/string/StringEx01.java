@@ -2,7 +2,7 @@ package step4_01.string;
 
 import java.util.Scanner;
 
-//커밋연습
+
 /*
  * 
  * # 문자열 입력
